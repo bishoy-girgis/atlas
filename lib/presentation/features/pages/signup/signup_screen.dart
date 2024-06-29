@@ -18,6 +18,8 @@ class SignupScreen extends StatefulWidget {
 
 class _SignupScreenState extends State<SignupScreen> {
   final TextEditingController userNameController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController phoneController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
   bool isPasswordVisible = true;
@@ -92,7 +94,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                 fontWeight: FontWeight.w200, fontSize: 14),
                           ),
                           CustomTextFormField(
-                            controller: userNameController,
+                            controller: emailController,
                             validator: (value) {
                               if (value == null || value.isEmpty) {
                                 return "Please enter your E-mail";
@@ -109,7 +111,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                 fontWeight: FontWeight.w200, fontSize: 14),
                           ),
                           CustomTextFormField(
-                            controller: userNameController,
+                            controller: phoneController,
                             validator: (value) {
                               if (value == null || value.isEmpty) {
                                 return "Please enter your phone no";
