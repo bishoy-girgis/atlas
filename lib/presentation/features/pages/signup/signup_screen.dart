@@ -189,7 +189,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 const GapH(h: 2),
                 TextButton(
                   onPressed: () {
-                    Navigator.pushReplacementNamed(context, PageRouteName.login);
+                    Navigator.pushNamed(context, PageRouteName.login);
                   },
                   child: RichText(
                     text: TextSpan(
