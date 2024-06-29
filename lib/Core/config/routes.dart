@@ -1,6 +1,7 @@
 import 'package:atlas/Core/config/page_route_name.dart';
 import 'package:atlas/presentation/features/pages/login/login_screen.dart';
 import 'package:flutter/material.dart';
+import '../../presentation/features/pages/signup/signup_screen.dart';
 import '../../presentation/features/pages/splash/splash_screen.dart';
 
 class Routes {
@@ -15,6 +16,9 @@ class Routes {
       case PageRouteName.home:
         return MaterialPageRoute(
             builder: (context) =>  const LoginScreen(), settings: routeSettings);
+      case PageRouteName.signup:
+        return MaterialPageRoute(
+            builder: (context) =>  const SignupScreen(), settings: routeSettings);
       default:
         return MaterialPageRoute<dynamic>(
             builder: (context) => const SplashView(), settings: routeSettings);
